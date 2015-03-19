@@ -10,32 +10,32 @@ void main(){
 
 	char operation[5];
 	
-	///Работа со списками
+	///Р Р°Р±РѕС‚Р° СЃРѕ СЃРїРёСЃРєРѕРј.
 	cout << "Primer raboty so spiskami." << endl;
 	cout << "Operazii:" << endl << "add <poryadok> <value>" << endl << "del <poryadok>" << endl;
 	MainList myList;
 
-	/** Получение числа операций */
+	/** РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РѕРїРµСЂР°С†РёР№ */
 	cout << "Vvedite kolichestvo operziy:" << endl;
 	cin >> n;
 
-	/** Цикл обработки команд 	*/
+	/** Р¦РёРєР» РѕР±СЂР°Р±РѕС‚РєРё РєРѕРјР°РЅРґ*/
 	for (int i = 0; i < n; i++){
 		cout << "Vvedite operziyu " << i + 1 << ":" << endl;
 		cin >> operation;
 		cin >> poryadok;
-		if (!strcmp(operation, "del")){ ///Обработка команды удаления элемента
+		if (!strcmp(operation, "del")){ ///РћР±СЂР°Р±РѕС‚РєР° РєРѕРјР°РЅРґС‹ СѓРґР°Р»РµРЅРёСЏ РёР· СЃРїРёСЃРєР°
 			myList.delList(poryadok);
 		}
-		else if (!strcmp(operation, "add")){ ///Обработка команды добавления элемента
+		else if (!strcmp(operation, "add")){ ///РћР±СЂР°Р±РѕС‚РєР° РєРѕРјР°РЅРґС‹ РґРѕР±Р°РІР»РµРЅРёСЏ РІ СЃРїРёСЃРѕРє
 			cin >> value;
 			myList.addList(poryadok, value);
 		}
-		fflush(stdin); ///Очистка буфера ввода
+		fflush(stdin); ///РћС‡РёС‰РµРЅРёРµ Р±СѓС„РµСЂР° РІРІРѕРґР°
 	}
-	myList.print(); ///Вывод значений
+	myList.print(); ///РџРµС‡Р°С‚СЊ СЌР»РµРјРµРЅС‚РѕРІ
 	
-	///Работа со стеком
+	///Р Р°Р±РѕС‚Р° СЃРѕ СЃС‚РµРєРѕРј.
 	cout << "-------------------------------------------------" << endl;
 	cout << "Primer raboty so stekom." << endl;
 	cout << "Operazii:" << endl << "push <value>" << endl << "pop" << endl;
@@ -56,7 +56,7 @@ void main(){
 	}
 	myStack.printStack();
 
-	///Работа с очередью
+	///Р Р°Р±РѕС‚Р° СЃ РѕС‡РµСЂРµРґСЊСЋ.
 	cout << "-------------------------------------------------" << endl;
 	cout << "Primer raboty s otsheredyu." << endl;
 	cout << "Operazii:" << endl << "add <value>" << endl << "del" << endl;
